@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env : { 
-    "BASE_URL" : 'http://localhost:3000/api'
+    "BASE_URL" : 'https://note-alighdeveloper.vercel.app/api'
   }
 }
 
