@@ -13,7 +13,7 @@ export default function Navbar() {
     const [search, setSearch] = useState('all');
 
     useEffect(() => {
-        if(!search) setSearch('all')
+        if(!search) setSearch('all') 
         filtering({router, search})
     }, [search])
 
