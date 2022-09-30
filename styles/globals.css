@@ -24,3 +24,7 @@ a {
     background: black;
   }
 }
+
+@import 'navbar.css';
+
+@import 'notif.css';

@@ -1,0 +1,19 @@
+.notif {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 202;
+    margin: 10px 15px;
+}
+
+.notif-body{
+    padding: 16px;
+    border-radius : 0 0 5px 5px 
+}
+
+.notif-header {
+    padding: 5px;
+    border-radius : 5px 5px 0 0 
+}

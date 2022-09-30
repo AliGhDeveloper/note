@@ -1,0 +1,17 @@
+.navbar {
+    background-color: rgb(243, 243, 52);
+}
+
+nav.side-nav  {
+    display: none !important;
+    padding : 10px 25px;
+    z-index: 200;
+}
+
+nav.side-nav.show {
+    display: block !important;
+}
+
+.nav-link {
+    cursor: pointer;
+}

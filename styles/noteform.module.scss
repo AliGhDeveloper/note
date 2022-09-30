@@ -1,0 +1,19 @@
+
+.note_form {
+    input {
+        background-color: darken(white, 8%);
+        width: 80%;
+        margin : 10px auto;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    textarea {
+        @extend input;
+        resize: none;
+        height: 400px;
+    }
+}
+
+.save {
+    width: 80%
+}
