@@ -64,7 +64,7 @@ export async function getServerSideProps({query}) {
   const search = query.search || 'all';
   const page = query.page || 1;
   const limit = query.limit || 6
-  const result = await getData(`/notes/&page=${page}&limit=${limit}`)
+  const result = await getData(`/notes/?search=${search}&page=${page}&limit=${limit}`)
   
   return {
     props: {
