@@ -48,7 +48,7 @@ async function getNotes(req, res) {
         // const feature = new FeaturesApi(Notes.find(), req.query).filter().pagination();
         const notes = await Notes.find();
         let more = false;
-        if(notes.length > limit) more = true
+        // if(notes.length > limit) more = true
         return res.status(200).json({message: 'this is a message!'})
     } catch (error) {
         console.log({ message: error.message })
