@@ -60,3 +60,15 @@ export default function Home({notes, more}) {
   )
 };
 
+export async function getServerSideProps({query}) {
+  const search = query.search || 'all';
+  const page = query.page || 1;
+  const limit = query.limit || 6
+  const result = await getData(`/notes`)
+  
+  return {
+    props: {
+      notes : result
+    }
+  }
+}
