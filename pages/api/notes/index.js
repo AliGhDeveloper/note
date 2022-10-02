@@ -49,7 +49,7 @@ async function getNotes(req, res) {
         const notes = await Notes.find();
         let more = false;
         if(notes.length > limit) more = true
-        return res.status(200).json(notes)
+        return res.status(200).json({message: 'this is a message!'})
     } catch (error) {
         console.log({ message: error.message })
     }
