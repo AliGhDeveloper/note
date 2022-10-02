@@ -44,7 +44,7 @@ export default function handler(req ,res){
 
 async function getNotes(req, res) {
     try {
-        const { limit } = req.query
+        const { limit } = req.query;
         // const feature = new FeaturesApi(Notes.find(), req.query).filter().pagination();
         const notes = await Notes.find();
         let more = false;
