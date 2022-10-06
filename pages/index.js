@@ -11,7 +11,7 @@ import filtering from "utiles/filter";
 export default function Home({notes, more}) {
   const router = useRouter();
   const [page, setPage] = useState(parseInt(router.query.page) || 1)
-  const { state, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
   
   useEffect(() => {
     if(page !== 1) filtering({router, page})
@@ -20,7 +20,7 @@ export default function Home({notes, more}) {
   const handleDelete = (id) => {
     deleteData(`/notes/${id}`)
       .then(result => {
-        if(!result.error) dispatch(removeItem(state.notes, id, 'ADD_NOTES'));
+        if(!result.error) notes = removeItem(notes, id, null);
         return dispatch({type: 'NOTIFY', payload: result})
       })
   }

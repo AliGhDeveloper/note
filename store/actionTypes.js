@@ -1,5 +1,6 @@
 export const removeItem = (arr, item, type) => {
     const newArr = arr.filter(i => i._id !== item);
+    if(type === null) return newArr
     return { type , payload: newArr}
 }
 
