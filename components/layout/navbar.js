@@ -13,7 +13,8 @@ export default function Navbar() {
     const [search, setSearch] = useState('all');
 
     useEffect(() => {
-        if(!search) setSearch('all')
+        if(!search) setSearch('all');
+        filtering({ router, search })
     }, [search])
 
 
@@ -22,10 +23,10 @@ export default function Navbar() {
         return ''
     }
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-        filtering({router, search})
-    }
+    // const handleSearch = (e) => {
+    //     e.preventDefault();
+    //     filtering({router, search})
+    // }
     
     return (
         <>
@@ -45,9 +46,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <input className="form-control form-control-sm me-2" type="search" placeholder="Search" onChange={(e) => setSearch(e.target.value)} aria-label="Search" />
-                        <button type="submit" onClick={handleSearch} className="btn btn-outline">search</button>
-                    </form>
+                        <input className="form-control form-control-sm me-2" type="search" placeholder="Search" onChange={(e) => setSearch(e.target.value)} aria-label="Search" />                    </form>
                 </div>
             </div>
         </nav>

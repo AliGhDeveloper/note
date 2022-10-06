@@ -68,7 +68,8 @@ export async function getServerSideProps({query}) {
   
   return {
     props: {
-      notes : result
+      notes : result.data,
+      more : result.more
     }
   }
 }

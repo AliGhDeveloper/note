@@ -44,12 +44,12 @@ class FeaturesApi {
 
 async function getNotes(req, res) {
     try {
-        // const { limit } = req.query;
-        // const feature = new FeaturesApi(Notes.find(), req.query).filter().pagination();
-        const notes = await Notes.find();
-        // let more = false;
-        // if(notes.length > limit) more = true
-        return res.status(200).json(notes)
+        const { limit } = req.query;
+        const feature = new FeaturesApi(Notes.find(), req.query).filter().pagination();
+        const notes = await feature.query;
+        let more = false;
+        if(notes.length > limit) more = true
+        return res.status(200).json({data: notes, more})
     } catch (error) {
         console.log({ message: error.message })
     }
