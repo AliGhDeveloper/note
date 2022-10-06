@@ -49,7 +49,7 @@ async function getNotes(req, res) {
         const notes = await feature.query;
         let more = false;
         if(notes.length > limit) more = true
-        return res.status(200).json({data: notes, more})
+        return res.status(200).json({data: notes.slice(0, limit), more})
     } catch (error) {
         console.log({ message: error.message })
     }
