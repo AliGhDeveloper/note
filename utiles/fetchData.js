@@ -1,4 +1,4 @@
-export const getData = async(url, token) => {
+export const getData = async(url, token=null) => {
     
     const response = await fetch(process.env.BASE_URL + url, {
         headers : {
@@ -11,7 +11,7 @@ export const getData = async(url, token) => {
     return result
 };
 
-export const postData = async(url, data, token) => {
+export const postData = async(url, data, token=null) => {
     
     const response = await fetch(process.env.BASE_URL + url, {
         method: 'POST',
@@ -27,7 +27,7 @@ export const postData = async(url, data, token) => {
     return result
 };
 
-export const putData = async(url, data, token) => {
+export const putData = async(url, data, token=null) => {
     
     const response = await fetch(process.env.BASE_URL + url, {
         method: 'PUT',
@@ -43,7 +43,7 @@ export const putData = async(url, data, token) => {
     return result
 }
 
-export const deleteData = async(url, token) => {
+export const deleteData = async(url, token=null) => {
     
     const response = await fetch(process.env.BASE_URL + url, {
         method: 'DELETE',

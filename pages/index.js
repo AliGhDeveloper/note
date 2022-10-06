@@ -11,7 +11,7 @@ import filtering from "utiles/filter";
 export default function Home({notes, more}) {
   const router = useRouter();
   const [page, setPage] = useState(parseInt(router.query.page) || 1)
-  const { dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
   
   useEffect(() => {
     if(page !== 1) filtering({router, page})

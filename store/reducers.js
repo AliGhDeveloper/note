@@ -7,6 +7,8 @@ export default function Reducer(state, action) {
         case actions.NOTIFY :
             return {...state, notify : action.payload};
         case actions.ADD_NOTES :
-        return {...state, notes : action.payload}
+            return {...state, notes : action.payload};
+        default:
+            return state
     }
 }
